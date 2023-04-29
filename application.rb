@@ -4,4 +4,12 @@ class Statement
     @name = name
     @subjects = subjects
   end
+
+  def show
+    puts @name + "は以下です"
+    @subjects.each do |subject|
+      puts subject
+    end
+  end
 end
+
