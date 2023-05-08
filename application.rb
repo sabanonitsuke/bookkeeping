@@ -14,9 +14,15 @@ selected = gets.chomp.to_i
 
 if selected == 0
   puts "勘定科目を入力してください"
+  statement_exist = false
   selected = gets.chomp
   statements.each do |statement|
     statement.check(selected)
+    statement_exist = true
+  end
+  puts statement_exist
+  if statement_exist == false
+    puts "#{selected}は存在しない勘定科目です"
   end
 elsif selected == 1
   puts "一覧を見たい5大科目を入力してください"
