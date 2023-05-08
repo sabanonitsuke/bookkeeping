@@ -15,11 +15,9 @@ selected = gets.chomp.to_i
 if selected == 0
   puts "勘定科目を入力してください"
   selected = gets.chomp
-  assets.check(selected)
-  liabilities.check(selected)
-  equities.check(selected)
-  expenses.check(selected)
-  revenues.check(selected)
+  statements.each do |statement|
+    statement.check(selected)
+  end
 elsif selected == 1
   puts "一覧を見たい5大科目を入力してください"
   selected = gets.chomp
