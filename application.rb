@@ -1,11 +1,11 @@
 require "./statement"
 
-statements = []
 assets = Statement.new("資産", ["現金", "預金", "土地", "備品", "車両運搬具", "未収入金"])
 liabilities = Statement.new("負債", ["買掛金", "未払金"])
 equities = Statement.new("純資産", ["資本金", "繰越利益剰余金", "利益準備金"])
 expenses = Statement.new("費用", ["支払利息", "仕入"])
 revenues = Statement.new("収益", ["受取利息", "売上", "固定資産売買益"])
+statements = [assets, liabilities, equities, expenses, revenues]
 
 puts "行いたいことを選択してください"
 puts "【0】勘定科目から調べる"
