@@ -15,6 +15,7 @@ class Statement
   def check(name)
     if @subjects.include?(name)
       puts "#{name}は【#{@name}】です"
+      return true
     end
   end
 end

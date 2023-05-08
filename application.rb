@@ -17,10 +17,10 @@ if selected == 0
   statement_exist = false
   selected = gets.chomp
   statements.each do |statement|
-    statement.check(selected)
-    statement_exist = true
+    if statement.check(selected)
+      statement_exist = true
+    end
   end
-  puts statement_exist
   if statement_exist == false
     puts "#{selected}は存在しない勘定科目です"
   end
