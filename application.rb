@@ -1,5 +1,6 @@
 require "./statement"
 
+statements = []
 assets = Statement.new("資産", ["現金", "預金", "土地", "備品", "車両運搬具", "未収入金"])
 liabilities = Statement.new("負債", ["買掛金", "未払金"])
 equities = Statement.new("純資産", ["資本金", "繰越利益剰余金", "利益準備金"])
